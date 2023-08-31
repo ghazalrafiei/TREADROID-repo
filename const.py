@@ -1,0 +1,5 @@
+TEST_REPO = 'test_repo'
+CONFIG_FILE = 'config.csv'
+SA_INFO_FOLDER = 'sa_info'
+LOG_FOLDER = 'log'
+SNAPSHOT_FOLDER = 'snapshot'
