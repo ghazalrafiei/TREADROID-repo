@@ -11,7 +11,7 @@ class Databank:
         self.gmail_password = 'mobiletesting'
         self.fname = 'Sealbot'
         self.lname = 'Labfellow'
-        self.login_email = ['uci.seal@gmail.com','shuqiliu2022@gmail.com']
+        self.login_email = ['uci.seal@gmail.com']
         self.email_subject='ICSTSuperCool'
         self.bill_amount = '56.6'
         self.bill_tip = '15'

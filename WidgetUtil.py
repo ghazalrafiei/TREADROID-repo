@@ -31,8 +31,6 @@ class WidgetUtil:
                     queue.insert(0, (child, idx + '-' + str(i)))
             else:  # a leaf node
                 executable_leaves.append(idx)
-        # print(layouts)
-        # print(executable_leaves)
         sign = [pkg_name, act_name, '+'.join(layouts), '+'.join(executable_leaves)]
         return '!'.join(sign)
 
@@ -74,7 +72,6 @@ class WidgetUtil:
         parent = soup_ele.find_parent()
         if parent and 'text' in parent.attrs and parent['text']:
             parent_text += parent['text']
-        # consider grandparent if it's TextInputLayout (for ? related apps)
         parent = parent.find_parent()
         if parent and 'text' in parent.attrs and parent['text'] and parent['class'][0] == 'TextInputLayout':
             parent_text += parent['text']
@@ -102,8 +99,6 @@ class WidgetUtil:
         if tag_name:
             cond['class'] = tag_name
         ele = soup.find(attrs=cond)
-        #for k, v in ele.attrs.items():
-        #    print(k, v)
         d = {}
         for key in cls.FEATURE_KEYS:
             d[key] = ele.attrs[key] if key in ele.attrs else ""
@@ -148,7 +143,6 @@ class WidgetUtil:
         widgets = []
         for w_class in cls.WIDGET_CLASSES:
             elements = soup.find_all('', w_class)
-            # print("elements",elements)
             for e in elements:
                 d = cls.get_widget_from_soup_element(e)
                 if d:
@@ -156,7 +150,6 @@ class WidgetUtil:
                         d['text'] = 'SIGN UP WITH GOOGLE'  # Specific for Yelp
                     d['package'], d['activity'] = pkg, act
                     widgets.append(d)
-        # print("widgets",widgets)
         if widgets or update_cache:
             cls.state_to_widgets[gui_signature] = {'all_widgets': widgets, 'most_similar_widgets': {}}
         return widgets
@@ -177,9 +170,7 @@ class WidgetUtil:
                         d[key] = WidgetUtil.propagate_clickable(e)
                     elif key == 'resource-id':
                         rid = d[key].split('/')[-1]
-                        # print("rid",rid)
-                        # print("criteria['resource-id']",criteria['resource-id'])
-                        if rid!=criteria['resource-id']:
+                        if rid != criteria['resource-id']:
                             break
                         prefix = ''.join(d[key].split('/')[:-1])
                         d[key] = rid
@@ -193,7 +184,6 @@ class WidgetUtil:
 
 
 
-
     @classmethod
     def get_widget_from_soup_element(cls, e):
         if not e:
@@ -202,14 +192,12 @@ class WidgetUtil:
         if 'enabled' in e.attrs and e['enabled'] == 'true':
             for key in cls.FEATURE_KEYS:
                 d[key] = e.attrs[key] if key in e.attrs else ''
-                
                 if key == 'class':
                     d[key] = d[key][0]  # for now, only consider the first class
                 elif key == 'clickable' and key in e.attrs and e.attrs[key] == 'false':
                     d[key] = WidgetUtil.propagate_clickable(e)
                 elif key == 'resource-id':
                     rid = d[key].split('/')[-1]
-                    # print("rid",rid)
                     prefix = ''.join(d[key].split('/')[:-1])
                     d[key] = rid
                     d['id-prefix'] = prefix + '/' if prefix else ''
@@ -224,7 +212,6 @@ class WidgetUtil:
 
     @classmethod
     def propagate_clickable(cls, soup_element):
-        # clickable propagation from immediate parent
         parent = soup_element.find_parent()
         if 'clickable' in parent.attrs and parent['clickable'] == 'true':
             return 'true'
@@ -234,74 +221,6 @@ class WidgetUtil:
                 if 'clickable' in parent.attrs and parent['clickable'] == 'true':
                     return 'true'
         return 'false'
-
-    # @classmethod
-    # def most_similar_widget(cls, current_widgets, src_event, dom, pkg, act,
-    #                         use_stopwords=True, expand_btn_to_text=False, cross_check=False,
-    #                         extra_score=0, update_cache=True):
-    #     # if target_action['class'] == 'SYS_EVENT':
-    #     #     return {'class': 'SYS_EVENT'}, 1
-    #     gui_signature = WidgetUtil.get_gui_signature(dom, pkg, act)
-    #     src_widget_signature = WidgetUtil.get_widget_signature(src_event)
-    #     if not update_cache:
-    #         w_res, score = WidgetUtil.get_most_similar_widget_from_cache(gui_signature, src_widget_signature)
-    #         if w_res:
-    #             return w_res, score
-    #
-    #     src_class = src_event['class']
-    #     is_clickable = src_event['clickable']  # string
-    #     is_password = src_event['password']  # string
-    #     pairs = []
-    #     if src_class in ['android.widget.ImageButton', 'android.widget.Button']:
-    #         if expand_btn_to_text:
-    #             src_class = ['android.widget.ImageButton', 'android.widget.Button', 'android.widget.TextView']
-    #         else:
-    #             src_class = ['android.widget.ImageButton', 'android.widget.Button']
-    #     elif src_class == 'android.widget.TextView' and is_clickable == 'true':
-    #         src_class = ['android.widget.ImageButton', 'android.widget.Button', 'android.widget.TextView']
-    #     elif src_class == 'android.widget.EditText' and src_event['action'][0].startswith('wait_until'):
-    #         # for tip apps, e.g., a51-a53-b51
-    #         src_class = ['android.widget.EditText', 'android.widget.TextView']
-    #     else:
-    #         src_class = [src_class]
-    #     for w in current_widgets:
-    #         if w['class'] in src_class and w['password'] == is_password:
-    #             if w['clickable'] == is_clickable:
-    #                 score = WidgetUtil.weighted_sim(w, src_event, use_stopwords=use_stopwords, cross_check=cross_check)
-    #                 # corner case for the password field in Target app registration
-    #                 if not score and is_password == 'true' and not (w['text'] or w['resource-id'] or w['content-desc']) \
-    #                         and w['class'] == 'android.widget.EditText':
-    #                     score = 1.0
-    #             elif src_event['action'][0].startswith('wait_until') and w['class'] in ['android.widget.EditText', 'android.widget.TextView']:
-    #                 # if checking oracle, no need to check clickable consistence for TextView and EditText
-    #                 # (for tip apps, e.g., a51-a51-b51 and a51-a53-b51)
-    #                 score = WidgetUtil.weighted_sim(w, src_event, use_stopwords=use_stopwords, cross_check=cross_check)
-    #             elif src_event['action'][0].startswith('swipe') and w['class'] in ['android.widget.TextView']:
-    #                 # corner case for a21-a25-b22; no need to check clickable consistence for TextView and swipe action
-    #                 score = WidgetUtil.weighted_sim(w, src_event, use_stopwords=use_stopwords, cross_check=cross_check)
-    #             else:
-    #                 score = None
-    #             if score:
-    #                 score = min(1.0, score + extra_score)
-    #                 pairs.append((w, score))
-    #
-    #     pairs = sorted(pairs, key=lambda x: x[1], reverse=True)
-    #     if pairs:
-    #         '''
-    #         for p in pairs:
-    #             print(p[0], p[1])
-    #         input('DUMP')
-    #         '''
-    #         candidate_pairs = [p for p in pairs if p[1] == pairs[0][1]]
-    #         ans = WidgetUtil.advanced_select(candidate_pairs, src_event)
-    #         assert gui_signature in cls.state_to_widgets
-    #         # assert src_widget_signature not in cls.state_to_widgets[gui_signature]['most_similar_widgets']
-    #         cls.state_to_widgets[gui_signature]['most_similar_widgets'][src_widget_signature] = [ans]
-    #         return ans[0], ans[1]
-    #     if update_cache:
-    #         assert gui_signature in cls.state_to_widgets
-    #         cls.state_to_widgets[gui_signature]['most_similar_widgets'][src_widget_signature] = [(None, -1)]
-    #     return None, -1
 
     @staticmethod
     def advanced_select(sim_pairs, src_event):
@@ -324,29 +243,6 @@ class WidgetUtil:
                         ans = p
         return ans
 
-    # @staticmethod
-    # def weighted_sim_new(new_widget, old_widget, use_stopwords=True, cross_check=False):
-    #     # cross check NL info in text and content-desc
-    #     # consider sibling text and adjust weights for parent and sibling for tip apps
-    #     attrs = ['resource-id', 'text', 'content-desc', 'parent_text', 'sibling_text']
-    #     sent_new, sent_old = [], []
-    #     for i, attr in enumerate(attrs):
-    #         # if attr in new_widget and attr in old_widget:
-    #         #     sent_new += StrUtil.tokenize(attr, new_widget[attr], use_stopwords=use_stopwords)
-    #         #     sent_old += StrUtil.tokenize(attr, old_widget[attr], use_stopwords=use_stopwords)
-    #         if attr in new_widget:
-    #             sent_new += StrUtil.tokenize(attr, new_widget[attr], use_stopwords=use_stopwords)
-    #         if attr in old_widget:
-    #             sent_old += StrUtil.tokenize(attr, old_widget[attr], use_stopwords=use_stopwords)
-    #     if sent_new and sent_old:
-    #         # todo: specific for yelp: ['Log', 'In'] -> ['Login']
-    #         sim = StrUtil.w2v_sent_sim(sent_new, sent_old)
-    #         if sim:
-    #             return sim
-    #         else:
-    #             return None
-    #     else:
-    #         return None
 
     @staticmethod
     def is_number(s):
@@ -370,7 +266,6 @@ class WidgetUtil:
     def weighted_sim(new_widget, old_widget, use_stopwords=True, cross_check=False):
         # similarity score is computed by the textual info of the widgets and the activities they belong to
         # cross check NL info in text and content-desc
-        # print("new_widget,old_widget",new_widget,old_widget)
         attrs = ['resource-id', 'text', 'content-desc', 'parent_text', 'sibling_text']
 
         # not to evaluate widget without textual info
@@ -385,81 +280,46 @@ class WidgetUtil:
             # attrs_weights = [0.3, 1.0, 1, 1, 0.5]  # higher weights for 'main' info source; proportionate to the DOM distance
             attrs_weights = [0.5, 1, 1, 1, 0.5]
 
-        # attrs_weights = [1, 1, 1, 1, 0.5]
-        # print("is_attr_existed_old,is_attr_existed_new",is_attr_existed_old,is_attr_existed_new)
         if is_attr_existed_old[0]!='' and is_attr_existed_new[0]!='':
-            attrs_weights[0] =0.5
-            attrs_weights[1]=0.5
+            attrs_weights[0] = 0.5
+            attrs_weights[1] = 0.5
         if is_attr_existed_old[1]=='':
-            attrs_weights[0] =1.0
-        # print("attrs_weights",attrs_weights)
+            attrs_weights[0] = 1.0
         w_scores = []
         for i, attr in enumerate(attrs):
             score = 0
             if attr in new_widget and attr in old_widget:
                 for i1 in ' '.join([new_widget[attr]]).split():
-                    # print("new_widget[attr]",i1,new_widget[attr])
                     if i1 in StrUtil.STOPWORDS or i1.lower() in StrUtil.STOPWORDS:
                         use_stopwords = False
                 for i2 in ' '.join([old_widget[attr]]).split():
-                    # print("old_widget[attr]", i2, old_widget[attr])
                     if i2 in StrUtil.STOPWORDS or i2.lower() in StrUtil.STOPWORDS:
                         use_stopwords = False
 
                 if attr == 'text' or attr == 'sibling_text':
                     if len(' '.join([new_widget[attr]]).split()) > 4:
-
                         new_widget[attr]=" ".join(new_widget[attr].split()[-2:])
-                        # print("new_widget[attr]",new_widget[attr])
-
-
-
-
 
                 s_old = StrUtil.tokenize(attr, old_widget[attr], use_stopwords=use_stopwords)
-                # print("s_old1",s_old,use_stopwords)
                 s_old = StrUtil.expand_text(old_widget['class'], attr, s_old)
-                # print("s_old2", s_old)
-
                 s_new = StrUtil.tokenize(attr, new_widget[attr], use_stopwords=use_stopwords)
-                # print("s_s_new1",s_new,use_stopwords)
                 s_new = StrUtil.expand_text(new_widget['class'], attr, s_new)
-                # if len(s_old)==1 and s_old[0] in StrUtil.STOPWORDS:
-                #     use_stopwords=False
-                #     s_new = StrUtil.tokenize(attr, new_widget[attr], use_stopwords=use_stopwords)
-                #     s_new = StrUtil.expand_text(new_widget['class'], attr, s_new)
 
-                # if len(s_new)==1 and s_new[0] in StrUtil.STOPWORDS:
-                #     use_stopwords=False
-                #     s_old = StrUtil.tokenize(attr, old_widget[attr], use_stopwords=use_stopwords)
-                #     s_old = StrUtil.expand_text(old_widget['class'], attr, s_old)
-                
-                
                 if attr=='text':
                     if len(s_new)>7 and old_widget['event_type']!='oracle':
                         s_new=[]
 
-
-
                 if s_new and s_old:
-
                     # s_new,s_old ['floating', 'action', 'button', 'setting'] ['add', 'todo', 'item', 'floating', 'action', 'button']
-
                     sim = StrUtil.w2v_sent_sim(s_new, s_old)
-                    print("attr,s_new,s_old,sim0", attr, s_new, s_old,sim)
-                    # print("attr,s_new,s_old,sim",attr,s_new,s_old,sim)
                     if len(s_new) == len(s_old) and attr == 'text' and s_new[0] == s_old[0]:
                         if s_new[-1] != s_old[-1] and s_new[-1] in StrUtil.STOPWORDS and s_old[-1] in StrUtil.STOPWORDS:
                             sim=sim-0.1
                     if sim:
-                        # if no text and no parent_text, sibling text is more important
-                        # (a22-a23-b21: srcIdx 1; a25-a23-b21: srcIdx 1)
                         score = sim * attrs_weights[i]
                         if attr == 'sibling_text':
                             if not all([old_widget['text'] + old_widget['parent_text'],
                                         new_widget['text'] + new_widget['parent_text']]):
-                            # if not old_widget['text'] and not old_widget['parent_text'] \
-                            #         and not new_widget['text'] and not new_widget['parent_text']:
                                 score = sim
 
 
@@ -467,38 +327,12 @@ class WidgetUtil:
             w_scores.append(score)
 
         # cross check parent_text and text
-
-        # if new_widget['class'] in ['android.widget.ImageView','android.widget.ImageButton'] or old_widget['class'] in ['android.widget.ImageView','android.widget.ImageButton']:
-        #     text_attrs = ['resource-id', 'parent_text','content-desc','sibling_text']
-        # else:
-        #     text_attrs = ['parent_text','sibling_text']#, ]
         if new_widget['class'] in ['android.widget.ImageView', 'android.widget.ImageButton'] or old_widget['class'] in ['android.widget.ImageView', 'android.widget.ImageButton']:
             text_attrs1=['resource-id','content-desc','sibling_text']
         else:
             text_attrs1 = ['text', 'resource-id', 'content-desc','sibling_text']
-        # text_attrs = ['parent_text', 'sibling_text']
         cross_score0 = -1
         cross_score1=-1
-        # for a1 in text_attrs:
-        #     for a2 in text_attrs:
-        #         if a1 != a2 and a1 in new_widget and new_widget[a1] and a2 in old_widget and old_widget[a2]:
-        #
-        #             if new_widget[a1].split('/')[-1] in StrUtil.STOPWORDS or old_widget[a2].split('/')[-1] in StrUtil.STOPWORDS:
-        #                 use_stopwords=False
-        #
-        #             s_old = StrUtil.tokenize(a2, old_widget[a2], use_stopwords=use_stopwords)
-        #             s_old = StrUtil.expand_text(old_widget['class'], a2, s_old)
-        #
-        #             s_new = StrUtil.tokenize(a1, new_widget[a1], use_stopwords=use_stopwords)
-        #             s_new = StrUtil.expand_text(new_widget['class'], a1, s_new)
-        #
-        #
-        #             if s_new and s_old:
-        #                 sim0 = StrUtil.w2v_sent_sim(s_new, s_old)
-        #                 if sim0==1:
-        #
-        #                     cross_score0 = sim0
-
         for a1 in text_attrs1:
             for a2 in text_attrs1:
                 if a1 != a2 and a1 in new_widget and new_widget[a1] and a2 in old_widget and old_widget[a2]:
@@ -511,26 +345,17 @@ class WidgetUtil:
                     
                     s_new = StrUtil.tokenize(a1, new_widget[a1], use_stopwords=use_stopwords)
                     s_new = StrUtil.expand_text(new_widget['class'], a1, s_new)
-              
-                   
                     if s_new and s_old:
-
                         sim1 = StrUtil.w2v_sent_sim(s_new, s_old)
                         if sim1:
                             if sim1 > cross_score1:
                                 cross_score1 = sim1
                         print("s_new,s_old,sim1", s_new, s_old,sim1)
-
-                        
-                            
-
         if cross_score0 > -1:
             print("-2*cross_score0",-2*cross_score0)
             w_scores.append(-2*cross_score0)
         if cross_score1 > -1:
             w_scores.append(cross_score1)
-
-
 
         if not w_scores and cross_check:  # cross check the NL info (Target app registration)
             cross_score = -1
@@ -562,14 +387,6 @@ class WidgetUtil:
             StrUtil.tokenize('Activity', old_widget['activity'], use_stopwords=use_stopwords),
             StrUtil.tokenize('Activity', new_widget['activity'], use_stopwords=use_stopwords)
         )
-        # state_score = state_score if state_score else -1
-        # # weight_w, weight_state = 0.5, 0.5
-        # weight_w, weight_state = 0.65, 0.35  # a31-a32-b31
-        # if w_scores:
-        #     return weight_w*(sum(w_scores)/len(w_scores)) + weight_state*state_score
-        # else:
-        #     return weight_state*state_score
-
         weight_state = 1
         state_score = state_score if state_score else 0
         state_score *= weight_state
@@ -579,9 +396,7 @@ class WidgetUtil:
 
     @classmethod
     def is_equal(cls, w1, w2, ignore_activity=False):
-        
         if not w1 or not w2:
-            
             return False
         keys_for_equality = set(cls.FEATURE_KEYS)
         keys_for_equality.remove('naf')
@@ -589,66 +404,29 @@ class WidgetUtil:
             keys_for_equality = keys_for_equality.union({'package', 'activity'})
         for k in keys_for_equality:
             if (k in w1 and k not in w2) or (k not in w1 and k in w2):
-                
                 return False
             if k in w1 and k in w2:
                 v1, v2 = w1[k], w2[k]
-                
                 if k == 'resource-id' and 'id-prefix' in w1:
                     v1 = w1['id-prefix'] + w1[k]
                 if k == 'resource-id' and 'id-prefix' in w2:
                     v2 = w2['id-prefix'] + w2[k]
-
                 if v1 != v2:
-                    # print("v1,v2",v1,v2)
-                    # print("3")
-                    # print("k,v1,v2",k,v1,v2)
                     return False
-        
         return True
-
-    '''
-    @staticmethod
-    def get_state_feature(act_name, dom, use_stopwords=True):
-        """Express a GUI state as:
-        1. tokenized words of current Activity;
-        2. # of clickable elements / android.widget.EditText widget / long-clickable elements
-        """
-        soup = BeautifulSoup(dom, 'lxml')
-        feature_vec = [
-            len(soup.find_all(attrs={'clickable': 'true', 'enabled': 'true'})),
-            len(soup.find_all(attrs={'class': 'android.widget.EditText', 'enabled': 'true'})),
-            len(soup.find_all(attrs={'long-clickable': 'true', 'enabled': 'true'}))
-        ]
-        #denominator = sum(feature_vec)
-        #if denominator > 0:
-        #    feature_vec = [n/denominator for n in feature_vec]
-        return {'act_name': str_util.tokenize('Activity', act_name, use_stopwords=use_stopwords), 'feature': feature_vec}
-    '''
 
     @classmethod
     def locate_widget(cls, dom, criteria):
-        # e.g., criteria =
-        #   {'class': 'TextView', 'text': 'Okay', 'resource-id': 'tv_task', 'content-desc': ""} or
-        #   {'class': 'android.widget.Button', 'resource-id': 'org.secuso.privacyfriendlytodolist:id/btn_skip'}
+
         regex_cria = {}
         for k, v in criteria.items():
             if v:
                 v = v.replace('+', r'\+')  # for error when match special char '+'
                 v = v.replace('?', r'\?')  # for error when match special char '?'
-               
-                # regex_cria[k] = re.compile(f'{v}$')
                 regex_cria[k] = re.compile(f'{v}')
-        # print("regex_cria",regex_cria)
         if not regex_cria:
             return None
         soup = BeautifulSoup(dom, 'lxml')
-        # print("dom",dom)
-        # print("regex_cria",regex_cria)
-
-        # <androidi resource-id="com.appple.app.email:id/folder_name" scrollable="false" selected="false" text="Sent (Sent)"></android.widget.textview>
-        # {'text': re.compile('Sent (Sent)'), , 'resource-id': re.compile('folder_name')}
-        # print("soup.find('', regex_cria)",soup.find_all('', regex_cria))
         if soup.find_all('', regex_cria)==[]:
             regex_cria = {}
             for k, v in criteria.items():
@@ -657,8 +435,6 @@ class WidgetUtil:
                     v = v.replace('?', r'\?')  # for error when match special char '?'
                     if k=='text':
                         v=v.split()[0]
-                
-                    # regex_cria[k] = re.compile(f'{v}$')
                     regex_cria[k] = re.compile(f'{v}')
 
         return cls.get_widget_from_soup_element1(soup.find_all('', regex_cria),criteria)
@@ -669,30 +445,6 @@ class WidgetUtil:
         is_clickable = src_event['clickable']  # string
         is_password = src_event['password']  # string
         similars = []
-        # if src_class in ['android.widget.ImageButton', 'android.widget.Button']:
-        #     if expand_btn_to_text:
-        #         src_class = ['android.widget.ImageButton', 'android.widget.Button', 'android.widget.TextView']
-        #     else:
-        #         src_class = ['android.widget.ImageButton', 'android.widget.Button']
-        # elif src_class == 'android.widget.TextView' and is_clickable == 'true':
-        #     src_class = ['android.widget.ImageButton', 'android.widget.Button', 'android.widget.TextView']
-        #     if re.search(r'https://\w+\.\w+', src_event['text']):  # e.g., a15-a1x-b12
-        #         src_class.append('android.widget.EditText')
-        # elif src_class == 'android.widget.TextView' and src_event['action'][0].startswith('wait_until_text_presence'):
-        #     # e.g., a53-a51-b51, a53-a52-b51
-        #     src_class = ['android.widget.TextView', 'android.widget.EditText']
-        # elif src_class == 'android.widget.EditText' and src_event['action'][0].startswith('wait_until_text_presence'):
-        #     # e.g., a51-a53-b51
-        #     src_class = ['android.widget.EditText', 'android.widget.TextView']
-        # elif src_class == 'android.widget.EditText' and re.search(r'https://\w+\.\w+', src_event['text']):
-        #     # e.g., a11-a15-b12
-        #     src_class = ['android.widget.EditText', 'android.widget.TextView']
-        # elif src_class in ['android.widget.MultiAutoCompleteTextView', 'android.widget.TextView']:  # a41, a42 (b42)
-        #     src_class = ['android.widget.MultiAutoCompleteTextView', 'android.widget.TextView']
-        #     if 'send_keys' in src_event['action']:
-        #         src_class.append('android.widget.EditText')
-        # else:
-        #     src_class = [src_class]
         tgt_classes = [src_class]
         if src_class in ['android.widget.ImageButton', 'android.widget.Button']:
             tgt_classes = ['android.widget.ImageButton', 'android.widget.Button']
@@ -701,10 +453,6 @@ class WidgetUtil:
             if expand_btn_to_text:
                 tgt_classes.append('android.widget.TextView')
         elif src_class in ['android.widget.ImageView']:
-            # if is_clickable == 'true':
-            #     tgt_classes.append('android.widget.ImageButton')
-            # else:
-            #     tgt_classes.append('android.widget.ImageView')
             tgt_classes.append('android.widget.ImageView')
             tgt_classes.append('android.widget.ImageButton')
         elif src_class == 'android.widget.TextView':
@@ -716,7 +464,6 @@ class WidgetUtil:
                     tgt_classes.append('android.widget.EditText')
             elif src_event['action'][0].startswith('wait_until_text_presence'):  # e.g., a53-a51-b51, a53-a52-b51
                 tgt_classes.append('android.widget.EditText')
-
         elif src_class == 'android.widget.EditText':
             tgt_classes.append('android.widget.MultiAutoCompleteTextView')  # a43-a41-b42
             if is_clickable == 'true' and src_event['action'][0]!='send_keys' and src_event['action'][0]!='clear_and_send_keys_and_hide_keyboard' and src_event['action'][0]!='clear_and_send_keys':
@@ -728,8 +475,6 @@ class WidgetUtil:
                 tgt_classes.append('android.widget.TextView')
         elif src_class == 'android.widget.MultiAutoCompleteTextView':  # a41-a43-b42
             tgt_classes.append('android.widget.EditText')
-        print("tgt_classes",tgt_classes)
-
         for w in widgets:
             need_evaluate = False
             if w['class'] in tgt_classes:
@@ -741,8 +486,6 @@ class WidgetUtil:
                     if w['clickable'] == is_clickable:
                         need_evaluate = True
                     elif 'action' in src_event and 'class' in w:
-                        # if checking oracle, no need to check clickable consistence for TextView and EditText
-                        # (e.g., a53-a51-b51 and a51-a53-b51)
                         if src_event['action'][0].startswith('wait_until') \
                                 and w['class'] in ['android.widget.EditText', 'android.widget.TextView']:
                             need_evaluate = True                    
@@ -754,10 +497,7 @@ class WidgetUtil:
 
                 else:  # a static widget
                     need_evaluate = True
-            # print("w",w,need_evaluate)
             score = WidgetUtil.weighted_sim(w, src_event, use_stopwords, cross_check) if need_evaluate else None
-            # if w['class'] in tgt_classes:
-            #     print(w, score)
             if score:
                 similars.append((w, score))
         similars.sort(key=lambda x: x[1], reverse=True)

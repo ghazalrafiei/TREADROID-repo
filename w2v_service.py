@@ -7,6 +7,7 @@ import os
 
 app = Flask(__name__)
 model = gensim.models.KeyedVectors.load_word2vec_format('E:/TREADROID/GoogleNews-vectors-negative300.bin', binary=True)
+
 cached_sim = dict()
 
 if os.path.exists('/w2v_sim_cache.pkl'):

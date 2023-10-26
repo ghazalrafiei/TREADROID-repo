@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
 import numpy as np
 import glob, os
@@ -28,26 +25,21 @@ def find_node_by_xpath(xpath, app):
     # print('find node for xpath', xpath, 'in app', app)
     for filename in os.listdir(directory):
         if filename.endswith(".uix"):
-            # print('check xpath in ', os.path.join(directory, filename))
             tree = etree.parse(os.path.join(directory, filename))
             root = tree.getroot()
             if xpath.startswith('//'):  # relative xpath
                 class_name = get_classname_from_xpath(xpath)
                 attribute = get_attribute_from_xpath(xpath)
-                # print('//node[@class="'+class_name+'"]['+attribute+']')
                 nodes = root.xpath('//node[@class="' + class_name + '"][' + attribute + ']')
                 if len(nodes) != 0:
-                    # print('current node is ', etree.tostring(nodes[0]))
                     return nodes[0]
             elif xpath.startswith('/hierarchy'):  # absolute xpath
                 class_names = xpath.split('/')
-                # print(class_names)
                 current_node = root.xpath('/hierarchy')[0]
                 no_matching = False
                 for class_name in class_names:
                     if class_name == '' or class_name == 'hierarchy':
                         continue
-                    # print('.//node[@class="' + class_name +'"]')
                     if '[' in class_name:  # multiple children with same class name
                         index = int(class_name[class_name.find("[") + 1:class_name.find("]")])
                         class_name = class_name.split('[')[0]
@@ -65,9 +57,7 @@ def find_node_by_xpath(xpath, app):
                         else:
                             current_node = current_nodes[0]
                 if not no_matching:
-                    # print('current node is ', etree.tostring(current_node))
                     return current_node
-    # print('current node is None')
     return None
 
 # trans test format: json with "input", "id_or_xpath", "action", "case". 'id_or_xpath' could be 'NONE'
@@ -146,8 +136,6 @@ def levenshtein(test):
                     matrix[x-1,y-1] + 1,
                     matrix[x,y-1] + 1
                 )
-    # print (matrix)
-    # print('distance = ', (matrix[size_x - 1, size_y - 1]))
     result['distance'] =  (matrix[size_x - 1, size_y - 1])
     return result
 

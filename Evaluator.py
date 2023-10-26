@@ -64,7 +64,6 @@ class Evaluator:
 
     def judge(self, es_pred, e_ans, event_type):
         # calibrate unimportant text for judge
-        
         for e in es_pred:
             if 'resource-id' in e and e['resource-id'].endswith('folder_name'):
                 if e['text'] in ['Inbox ' + str(i) for i in range(1, 21)]:
@@ -93,14 +92,9 @@ class Evaluator:
                     print("--fpe_ans", e_ans)
                     print("--fpes_pred", es_pred)
 
-                # if event_type == 'oracle':
-                #     print(e_ans)
-                #     print(es_pred)
         elif e_ans['class'] != 'EMPTY_EVENT':
             if all([e['class'] == 'EMPTY_EVENT' for e in es_pred]):
                 cat = 'fn'
-                print("fn", e_ans)
-                print("fn", es_pred)
             else:
                 # print("e,e_ans",e,e_ans)
                 if any([WidgetUtil.is_equal(e, e_ans, ignore_activity) for e in es_pred]):
@@ -123,7 +117,6 @@ class Evaluator:
 
     def output_res(self):
         label = ['tp', 'tn', 'fp', 'fn']
-        # print(label)
         print("self.res",self.res)
         for k, v in self.res.items():
             # print(k)
@@ -158,7 +151,6 @@ if __name__ == '__main__':
         cids = evaluator.get_all_config_ids(sol)
         for cid in cids:
             print(cid)
-
             evaluator.evaluate(cid)
             
 

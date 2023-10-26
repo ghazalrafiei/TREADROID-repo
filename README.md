@@ -6,16 +6,16 @@
 * Download the [subject apks](https://drive.google.com/open?id=1wb9ODzqMfsRCLqU80QF-g_1IrF0r7-vj) and `git clone` this project.
 
 # Getting Started
-1. Install subject apps on an emulator; we suggest starting with the apps under a2-todo/ to avoid some network issues of apps
+1. Install subject apps on an emulator
 2. Start the emulator; Start Appium-desktop
-3. Run `word2vec_service.py` first to activate the background web service for similarity query (modify the path in source code pointing to `GoogleNews-vectors-negative300.bin`)
+3. Run `w2v_service.py` first to activate the background web service for similarity query (modify the path in source code pointing to `GoogleNews-vectors-negative300.bin`)
 4. Run Explorerm.py with arguments: 
 ```
-python3 Explorerm.py ${TRANSFER_ID} ${APPIUM_PORT} ${EMULATOR}
+python3 Explorerm.py ${TRANSFER_ID}
 ```
 TRANSFER_ID is the transfer id, APPIUM_PORT is the port used by Appium-Desktop (4723 by default), EMULATOR is the name of the emulator, e.g., 
 ```
-python3 Explorer.py a21-a22-b21 4723 emulator-5554
+python3 Explorer.py a21-a22-b21
 ```
 It will start transferring the test case of `a21-Minimal` to `a22-Clear` List for the b21-Add task function. 
 

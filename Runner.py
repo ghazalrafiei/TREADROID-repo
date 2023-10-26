@@ -46,30 +46,6 @@ class Runner:
                 self.driver.reset()
         #time.sleep(self.act_interval)
 
-
-        '''
-        # specific for Etsy app (w/ two different staring screens)
-        found = False
-        while not found:
-            try:
-                driver.find_element_by_xpath('//android.widget.Button[@text="Get Started"]')
-                found = True
-            except:
-                print('Exception: required btn not found')
-                driver.reset()
-                time.sleep(act_interval)
-        '''
-
-        # found = False
-        # while not found:
-        #     try:
-        #         self.driver.find_element_by_xpath('//android.widget.Button[@text="Get Started"]')
-        #         found = True
-        #     except:
-        #         print('Exception: required btn not found')
-        #         self.driver.reset()
-        #         time.sleep(self.act_interval)
-
         is_for_confirm = False
         # specific for Yelp app. Cancel the pop-up dialog
         try:
@@ -80,8 +56,6 @@ class Runner:
         print("action_list",action_list)
         for i, action in enumerate(action_list):
             time.sleep(self.act_interval)
-            # print(f'doing action: {action}')
-            # print(driver.page_source)
             # if the action is SYS_EVENT, no need to get the element
             if action['class'] == 'SYS_EVENT':
                 if action['action'][0] == 'sleep':
@@ -218,9 +192,6 @@ class Runner:
             elif action['naf']:  # "naf" is either "true" or ""; a32-a33-b31
                 xpath = '//' + action['class'] + '[@NAF="true"]'
                 ele = self.driver.find_element(MobileBy.XPATH, xpath)
-            # elif action['password'] == 'true':  # corner case for the password field in Target app registration
-            #     xpath = '//' + action['class'] + '[@password="true"]'
-            #     ele = self.driver.find_element(MobileBy.XPATH, xpath)
             else:
                 assert False, "No attribute to locate widgets"
         except Exception as excep:
