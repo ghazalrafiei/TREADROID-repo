@@ -13,11 +13,13 @@
 ```
 python3 Explorerm.py ${TRANSFER_ID}
 ```
-TRANSFER_ID is the transfer id, APPIUM_PORT is the port used by Appium-Desktop (4723 by default), EMULATOR is the name of the emulator, e.g., 
+TRANSFER_ID is the transfer id, e.g., 
 ```
-python3 Explorer.py a21-a22-b21
+python3 Explorerm.py a21-a22-b21
 ```
 It will start transferring the test case of `a21-Minimal` to `a22-Clear` List for the b21-Add task function. 
+
+APPIUM_PORT is the port used by Appium-Desktop (4723 by default), EMULATOR is the name of the emulator.
 
 5. The source test cases are under test-repo/[CATEGORY]/[FUNCTIONALITY]/base/[APP_ID].json, e.g., `test-repo/a2/b21/base/a21.json`. The generated test cases for the target app is under generated/[APP_FROM]-/[APP_TO]-[FUNCTIONALITY].json, e.g., `test-repo/a2/b21/generated/a21-a22-b21.json`
 
