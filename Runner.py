@@ -33,6 +33,7 @@ class Runner:
             'appPackage': app_name,
             'appActivity': app_activity,
             'autoGrantPermissions': True,
+            'newCommandTimeout':6000,
             'noReset': no_reset
         }
         if udid:
