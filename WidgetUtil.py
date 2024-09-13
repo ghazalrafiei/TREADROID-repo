@@ -430,7 +430,7 @@ class WidgetUtil:
         if not regex_cria:
             return None
         soup = BeautifulSoup(dom, 'lxml-xml')
-        if soup.find_all('', regex_cria)==[]:
+        if soup.find_all(attrs=regex_cria)==[]:
             regex_cria = {}
             for k, v in criteria.items():
                 if v:
@@ -440,7 +440,7 @@ class WidgetUtil:
                         v=v.split()[0]
                     regex_cria[k] = re.compile(f'{v}')
 
-        return cls.get_widget_from_soup_element1(soup.find_all('', regex_cria),criteria)
+        return cls.get_widget_from_soup_element1(soup.find_all(attrs=regex_cria),criteria)
 
     @classmethod
     def most_similar(cls, src_event, widgets, use_stopwords=True, expand_btn_to_text=False, cross_check=False):
