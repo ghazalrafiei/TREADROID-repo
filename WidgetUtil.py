@@ -91,7 +91,7 @@ class WidgetUtil:
 
     @classmethod
     def get_attrs(cls, dom, attr_name, attr_value, tag_name=''):
-        soup = BeautifulSoup(dom, 'lxml')
+        soup = BeautifulSoup(dom, 'lxml-xml')
         if attr_name == 'text-contain':
             cond = {'text': lambda x: x and attr_value in x}
         else:
@@ -138,11 +138,11 @@ class WidgetUtil:
 
 
 
-        soup = BeautifulSoup(dom, 'lxml')
+        soup = BeautifulSoup(dom, 'lxml-xml')
         # print("soup",soup)
         widgets = []
         for w_class in cls.WIDGET_CLASSES:
-            elements = soup.find_all('', w_class)
+            elements = soup.find_all(attrs={'class': w_class})
             for e in elements:
                 d = cls.get_widget_from_soup_element(e)
                 if d:
@@ -165,7 +165,7 @@ class WidgetUtil:
                     d[key] = e.attrs[key] if key in e.attrs else ''
                     
                     if key == 'class':
-                        d[key] = d[key][0]  # for now, only consider the first class
+                        d[key] = d[key].split()[0]  # for now, only consider the first class
                     elif key == 'clickable' and key in e.attrs and e.attrs[key] == 'false':
                         d[key] = WidgetUtil.propagate_clickable(e)
                     elif key == 'resource-id':
@@ -423,10 +423,13 @@ class WidgetUtil:
             if v:
                 v = v.replace('+', r'\+')  # for error when match special char '+'
                 v = v.replace('?', r'\?')  # for error when match special char '?'
-                regex_cria[k] = re.compile(f'{v}')
+                if k == 'resource-id':
+                    regex_cria[k] = re.compile(f'{v}$')
+                else:
+                    regex_cria[k] = re.compile(f'{v}')
         if not regex_cria:
             return None
-        soup = BeautifulSoup(dom, 'lxml')
+        soup = BeautifulSoup(dom, 'lxml-xml')
         if soup.find_all('', regex_cria)==[]:
             regex_cria = {}
             for k, v in criteria.items():
@@ -506,9 +509,9 @@ class WidgetUtil:
     @classmethod
     def get_nearest_button(cls, dom, w):
         # for now just return the first btn on the screen; todo: find the nearest button
-        soup = BeautifulSoup(dom, 'lxml')
+        soup = BeautifulSoup(dom, 'lxml-xml')
         for btn_class in ['android.widget.ImageButton', 'android.widget.Button', 'android.widget.EditText']:
-            all_btns = soup.find_all('', btn_class)
+            all_btns = soup.find_all(attrs={'class': btn_class})
             if all_btns and len(all_btns) > 0:
                 return cls.get_widget_from_soup_element(all_btns[0])
         return None

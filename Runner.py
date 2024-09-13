@@ -1,11 +1,12 @@
-from distutils.command.config import config
+# from distutils.command.config import config
 from appium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import WebDriverException
-from appium.webdriver.common.mobileby import MobileBy
+from appium.webdriver.common.appiumby import AppiumBy as MobileBy
 from appium.webdriver.common.touch_action import TouchAction
-
+from appium.options.android import UiAutomator2Options
+import subprocess
 from selenium.common.exceptions import NoSuchElementException
 import time
 import re
@@ -19,7 +20,9 @@ from StrUtil import StrUtil
 class Runner:
     def __init__(self, pkg, act, no_reset=False, appium_port='4723', udid=None):
         desired_caps = Runner.set_caps(pkg, act, no_reset, udid)
-        self.driver = webdriver.Remote('http://localhost:' + appium_port, desired_caps)
+        capabilities_options = UiAutomator2Options().load_capabilities(desired_caps)
+        self.driver = webdriver.Remote(command_executor='http://localhost:' + appium_port, options=capabilities_options)
+
         self.databank = Databank()
         self.act_interval = 2
 
@@ -33,7 +36,7 @@ class Runner:
             'appPackage': app_name,
             'appActivity': app_activity,
             'autoGrantPermissions': True,
-            'newCommandTimeout':6000,
+            'newCommandTimeout': 6000,
             'noReset': no_reset
         }
         if udid:
@@ -43,10 +46,14 @@ class Runner:
     def perform_actions(self, action_list, require_wait=False, reset=True, cgp=None):
         if reset:
             if self.driver.desired_capabilities['desired']['noReset']:
-                self.driver.launch_app()  # don't clear app data
+                # self.driver.launch_app() is deprecated
+                self.driver.activate_app(app_id=self.driver.desired_capabilities['appPackage'])  # don't clear app data
             else:
-                self.driver.reset()
-        #time.sleep(self.act_interval)
+                # self.driver.reset() is deprecated
+                self.driver.terminate_app(app_id=self.driver.desired_capabilities['appPackage'])
+                subprocess.run(f"adb shell pm clear {self.driver.desired_capabilities['appPackage']}".split(),
+                                stdout=subprocess.DEVNULL)
+                self.driver.activate_app(app_id=self.driver.desired_capabilities['appPackage'])
 
         is_for_confirm = False
         # specific for Yelp app. Cancel the pop-up dialog
@@ -141,6 +148,7 @@ class Runner:
                     ele.click()
                     ele.send_keys(value_for_input)
                     if action['action'][0].endswith('hide_keyboard'):
+                        time.sleep(self.act_interval/2)
                         ele.click()
                         self.hide_keyboard()
                     elif action['action'][0].endswith('enter'):

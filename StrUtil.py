@@ -1,6 +1,7 @@
 import re
 import requests
 import numpy as np
+import json
 
 
 class StrUtil:
@@ -164,7 +165,7 @@ class StrUtil:
         if len(s_new) == 0 or len(s_old) == 0:
             return None
         # resp = requests.post(url='http://127.0.0.1:5000/w2v', data=data).json()
-        resp = requests.post(url='https://w2v.liara.run/w2v', json=data, headers={'Content-Type': 'application/json'}).json()
+        resp = requests.post(url='https://w2v.liara.run/w2v', headers={'Content-Type': 'application/json'}, data=json.dumps(data)).json()
 
         if 'sent_sim' in resp and resp['sent_sim']:
             return resp['sent_sim']
