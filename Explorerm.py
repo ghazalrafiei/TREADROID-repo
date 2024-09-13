@@ -347,7 +347,8 @@ class Explorer:
                 try:
                     dom, pkg, act = self.execute_target_events([])
                     # print("act",act)
-                except:  # selenium.common.exceptions.NoSuchElementException
+                except Exception as e:  # selenium.common.exceptions.NoSuchElementException
+                    print(e)
                     # a23-a21-b21, a24-a21-b21: selected an EditText which is not editable
                     print(f'Backtrack to the previous step due to an exception in execution.')
                     invalid_event = self.tgt_events[-1]

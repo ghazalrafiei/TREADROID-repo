@@ -19,7 +19,7 @@ from StrUtil import StrUtil
 class Runner:
     def __init__(self, pkg, act, no_reset=False, appium_port='4723', udid=None):
         desired_caps = Runner.set_caps(pkg, act, no_reset, udid)
-        self.driver = webdriver.Remote('http://localhost:' + appium_port + '/wd/hub', desired_caps)
+        self.driver = webdriver.Remote('http://localhost:' + appium_port, desired_caps)
         self.databank = Databank()
         self.act_interval = 2
 
@@ -27,9 +27,10 @@ class Runner:
     def set_caps(app_name, app_activity, no_reset=False, udid=None):
         caps = {
             'platformName': 'Android',
-            'platformVersion': '6.0',
+            'platformVersion': '10.0',
             'deviceName': 'Android Emulator',
-            'app': app_name,
+            'automationName':"uiautomator2",
+            'appPackage': app_name,
             'appActivity': app_activity,
             'autoGrantPermissions': True,
             'noReset': no_reset
@@ -63,7 +64,7 @@ class Runner:
                 elif action['action'][0] == 'KEY_BACK':
                     self.driver.press_keycode(4)  # AndroidKeyCode for 'Back'
                 elif action['action'][0] == 'restart_app':
-                    self.driver.activate_app(self.driver.desired_capabilities['app'])
+                    self.driver.activate_app(self.driver.desired_capabilities['appPackage'])
                 else:
                     assert False, 'Unknown SYS_EVENT'
                 continue
