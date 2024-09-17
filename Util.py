@@ -42,8 +42,11 @@ class Util:
         for a in new_actions:
             if a['class'] in ['EMPTY_EVENT', 'SYS_EVENT']:
                 continue
-            a['resource-id'] = a['id-prefix'] + a['resource-id']
-            a.pop('id-prefix', "")
+            try:
+                a['resource-id'] = a['id-prefix'] + a['resource-id']
+                a.pop('id-prefix', "")
+            except:
+                a['resource-id'] = 'id-prefix' + a['resource-id']
         with open(fpath, 'w') as f:
             json.dump(new_actions, f, indent=2)
 

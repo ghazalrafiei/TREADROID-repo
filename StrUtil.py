@@ -161,6 +161,7 @@ class StrUtil:
     @staticmethod
     def w2v_sent_sim(s_new, s_old):
         # run w2v_service.py first to activate the w2v service
+        # return 0.6
         data = {'s_new': s_new, 's_old': s_old}
         if len(s_new) == 0 or len(s_old) == 0:
             return None

@@ -69,7 +69,7 @@ class Explorer:
     def run(self):
         # todo: or exceed a time limit
         while self.f_target <= 0.12 and self.f_target - self.f_prev_target > 0.001:
-
+            print('Entered Target')
             self.f_prev_target = self.f_target
             self.prev_tgt_events = self.tgt_events
             self.tgt_events = []
@@ -1253,7 +1253,7 @@ if __name__ == '__main__':
     config_id = sys.argv[1]
     appium_port = '4723'
     # APPIUM_PORT is the port used by Appium-Desktop (4723 by default)
-    udid = 'emulator-5554'
+    udid = 'emulator-5556'
     # EMULATOR is the name of the emulator
     LOAD_SNAPSHOT = False
     if os.path.exists(os.path.join(SNAPSHOT_FOLDER, config_id + '.pkl')) and LOAD_SNAPSHOT:

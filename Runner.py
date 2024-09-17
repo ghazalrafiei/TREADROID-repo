@@ -30,14 +30,15 @@ class Runner:
     def set_caps(app_name, app_activity, no_reset=False, udid=None):
         caps = {
             'platformName': 'Android',
-            'platformVersion': '10.0',
+            'platformVersion': '12.0',
             'deviceName': 'Android Emulator',
             'automationName':"uiautomator2",
             'appPackage': app_name,
             'appActivity': app_activity,
             'autoGrantPermissions': True,
             'newCommandTimeout': 6000,
-            'noReset': no_reset
+            'noReset': True,
+            "appWaitForLaunch" : False
         }
         if udid:
             caps['udid'] = udid
