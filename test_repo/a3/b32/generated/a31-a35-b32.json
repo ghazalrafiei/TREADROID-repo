@@ -1,0 +1,129 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "hot_button_search",
+    "id-prefix": "com.yelp.android:id/",
+    "text": "Search",
+    "content-desc": "Search",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Nearby",
+    "stepping_events": [],
+    "activity": ".nearby.ui.ActivityNearby",
+    "package": "com.yelp.android",
+    "event_type": "oracle",
+    "score": 0.178213763050735,
+    "action": [
+      "wait_until_element_presence",
+      150,
+      "id",
+      "hot_button_search"
+    ]
+  },
+    {
+    "class": "android.widget.TextView",
+    "resource-id": "hot_button_search",
+    "id-prefix": "com.yelp.android:id/",
+    "text": "Search",
+    "content-desc": "Search",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Nearby",
+    "stepping_events": [],
+    "activity": ".nearby.ui.ActivityNearby",
+    "package": "com.yelp.android",
+    "event_type": "gui",
+    "score": 0.178213763050735,
+    "action": [
+      "click"
+    ]
+  },
+    {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "locationbar",
+    "id-prefix": "com.yelp.android:id/",
+    "text":"Current Location",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "package": "com.yelp.android",
+    "event_type": "oracle",
+    "score": 0.13724412272373834,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "uci.seal@gmail.com"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "search_button",
+    "id-prefix": "com.yelp.android:id/",
+    "text":"",
+    "content-desc": "Search Yelp",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "package": "com.yelp.android",
+    "event_type": "oracle",
+    "score": 0.15385617222636938,
+    "action": [
+      "wait_until_element_presence",
+      150,
+      "xpath",
+      "//*[@content-desc=\"Search Yelp\"]"
+    ]
+  },
+    {
+    "class": "android.widget.EditText",
+    "resource-id": "search_button",
+    "id-prefix": "com.yelp.android:id/",
+    "text":"",
+    "content-desc": "Search Yelp",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "package": "com.yelp.android",
+    "event_type": "gui",
+    "score": 0.15385617222636938,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]

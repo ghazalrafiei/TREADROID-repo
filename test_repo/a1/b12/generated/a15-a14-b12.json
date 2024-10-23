@@ -1,0 +1,154 @@
+[
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "de.baumann.browser:id/floatButton_ok",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "gui",
+    "score": 0.10009301205476125,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "de.baumann.browser:id/main_omnibox_input",
+    "text": "Search or type URL",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "gui",
+    "score": 0.2235500059489693,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "de.baumann.browser:id/main_omnibox_input",
+    "text": "Search or type URL",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "gui",
+    "score": 0.2235500059489693,
+    "action": [
+      "send_keys_and_enter",
+      "https://www.ics.uci.edu"
+    ]
+  },
+  {
+    "class": "android.view.View",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "UCI Donald Bren School of Information and Computer Sciences - logo",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "oracle",
+    "score": 0.2525429154435794,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.view.View[@content-desc=\"UCI Donald Bren School of Information and Computer Sciences - logo\"]"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "de.baumann.browser:id/main_omnibox_input",
+    "text": "https://www.ics.uci.edu/",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "gui",
+    "score": 0.20406657164650305,
+    "action": [
+      "send_keys_and_enter",
+      "https://uci.edu"
+    ]
+  },
+  {
+    "class": "android.view.View",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "UCI homepage",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "oracle",
+    "score": 0.2525429154435794,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.view.View[@content-desc=\"UCI homepage\"]"
+    ]
+  },
+  {
+    "class": "SYS_EVENT",
+    "action": [
+      "KEY_BACK"
+    ],
+    "event_type": "SYS_EVENT",
+    "score": 0
+  },
+  {
+    "class": "android.view.View",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "UCI Donald Bren School of Information and Computer Sciences - logo",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "de.baumann.browser",
+    "activity": ".Activity.BrowserActivity",
+    "event_type": "oracle",
+    "score": 0.2525429154435794,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.view.View[@content-desc=\"UCI Donald Bren School of Information and Computer Sciences - logo\"]"
+    ]
+  }
+]

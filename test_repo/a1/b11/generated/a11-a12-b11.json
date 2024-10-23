@@ -1,0 +1,63 @@
+[
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.android.browser:id/url",
+    "text": "https://www.google.com/webhp?client=android-google&source=android-home",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.android.browser",
+    "activity": ".BrowserActivity",
+    "event_type": "gui",
+    "score": 0.17178441071882844,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.android.browser:id/url",
+    "text": "https://www.google.com/webhp?client=android-google&source=android-home",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.android.browser",
+    "activity": ".BrowserActivity",
+    "event_type": "gui",
+    "score": 0.17178441071882844,
+    "action": [
+      "send_keys_and_enter",
+      "https://www.ics.uci.edu"
+    ]
+  },
+  {
+    "class": "android.view.View",
+    "resource-id": "",
+    "text": "UCI Donald Bren School of Information and Computer Sciences - logo UCI - Donald Bren School of Information and Computer Sciences Logo",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.android.browser",
+    "activity": ".BrowserActivity",
+    "event_type": "oracle",
+    "score": 0.2164653559614505,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.view.View[@content-desc=\"\"]"
+    ]
+  }
+]

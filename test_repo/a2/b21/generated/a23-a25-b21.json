@@ -1,0 +1,101 @@
+[
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "com.woefe.shoppinglist:id/fab_add",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.woefe.shoppinglist",
+    "activity": ".activity.MainActivity",
+    "event_type": "gui",
+    "score": 0.19616717845201492,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.woefe.shoppinglist",
+    "activity": ".activity.MainActivity",
+    "event_type": "gui",
+    "score": 0.16666666666666666,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.woefe.shoppinglist:id/new_item_quantity",
+    "text": "Quantity",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "New Item",
+    "stepping_events": [],
+    "package": "com.woefe.shoppinglist",
+    "activity": ".activity.MainActivity",
+    "event_type": "gui",
+    "score": 0.3334012122617828,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sample Todo"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "com.woefe.shoppinglist:id/button_add_new_item",
+    "text": "",
+    "content-desc": "Done",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Quantity",
+    "stepping_events": [],
+    "package": "com.woefe.shoppinglist",
+    "activity": ".activity.MainActivity",
+    "event_type": "gui",
+    "score": 0.28187279403209686,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "",
+    "text": "Shopping List",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.woefe.shoppinglist",
+    "activity": ".activity.MainActivity",
+    "event_type": "oracle",
+    "score": 0.1982665273050467,
+    "action": [
+      "wait_until_element_presence",
+      100,
+      "xpath",
+      "//android.widget.TextView[@text=\"Shopping List\"]"
+    ]
+  }
+]

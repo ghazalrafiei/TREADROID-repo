@@ -1,0 +1,68 @@
+[
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "kdk.android.simplydo:id/AddListEditText",
+    "text": "New List Name",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "kdk.android.simplydo",
+    "activity": ".SimplyDoActivity",
+    "event_type": "gui",
+    "score": 0.19626865003790175,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sample Todo"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "kdk.android.simplydo:id/AddListButton",
+    "text": "Add",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Sample Todo",
+    "stepping_events": [],
+    "package": "kdk.android.simplydo",
+    "activity": ".SimplyDoActivity",
+    "event_type": "gui",
+    "score": 0.18115921484099493,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "kdk.android.simplydo:id/text1",
+    "text": "Sample Todo",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "kdk.android.simplydo",
+    "activity": ".SimplyDoActivity",
+    "event_type": "oracle",
+    "score": 0.2651934052507083,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.widget.TextView[@text=\"Sample Todo\"]"
+    ]
+  }
+]

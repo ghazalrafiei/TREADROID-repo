@@ -1,0 +1,99 @@
+[
+  {
+    "class": "android.widget.Button",
+    "resource-id": "org.mozilla.focus:id/skip",
+    "text": "Skip",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.MainActivity",
+    "package": "org.mozilla.focus",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "org.mozilla.focus:id/urlView",
+    "text": "Search or enter address",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "skip",
+        "id-prefix": "org.mozilla.focus:id/",
+        "text": "Skip",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.MainActivity",
+        "package": "org.mozilla.focus",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "org.mozilla.focus",
+    "activity": ".activity.MainActivity",
+    "event_type": "gui",
+    "score": 0.2749436710340281,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "org.mozilla.focus:id/urlView",
+    "text": "Search or enter address",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "org.mozilla.focus",
+    "activity": ".activity.MainActivity",
+    "event_type": "gui",
+    "score": 0.2749436710340281,
+    "action": [
+      "send_keys_and_enter",
+      "https://www.ics.uci.edu"
+    ]
+  },
+  {
+    "class": "android.view.View",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "UCI Donald Bren School of Information and Computer Sciences - logo",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "org.mozilla.focus",
+    "activity": ".activity.MainActivity",
+    "event_type": "oracle",
+    "score": 0.3333333333333333,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.view.View[@content-desc=\"UCI Donald Bren School of Information and Computer Sciences - logo\"]"
+    ]
+  }
+]

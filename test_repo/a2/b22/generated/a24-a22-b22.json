@@ -1,0 +1,197 @@
+[
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "douzifly.list:id/fab_add",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "No things is good things.",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.18706764777501425,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "douzifly.list:id/edit_text",
+    "text": "Title",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.2196840246518453,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sample Todo"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/txt_title",
+    "text": "Default",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".ui.home.MainActivity",
+    "package": "douzifly.list",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "douzifly.list:id/fab_add",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "The first and greatest victory is to conquer yourself, to be conquered by yourself is of all things most shameful and vile.",
+    "stepping_events": [
+      {
+        "class": "android.widget.TextView",
+        "resource-id": "txt_title",
+        "id-prefix": "douzifly.list:id/",
+        "text": "Default",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".ui.home.MainActivity",
+        "package": "douzifly.list",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.17206794857269242,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/txt_thing",
+    "text": "Sample Todo",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "oracle",
+    "score": 0.2651934052507083,
+    "action": [
+      "wait_until_text_presence",
+      100,
+      "text",
+      "Sample Todo"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/txt_thing",
+    "text": "Sample Todo",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.2651934052507083,
+    "action": [
+      "swipe_right"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/btn_delete",
+    "text": "DELETE",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.2705286654333274,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "douzifly.list:id/fab_add",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "No things is good things.",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.15466190023081644,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "",
+    "clickable": "",
+    "password": "",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "oracle",
+    "score": 0,
+    "action": [
+      "wait_until_text_invisible",
+      100,
+      "text",
+      "Sample Todo"
+    ]
+  }
+]

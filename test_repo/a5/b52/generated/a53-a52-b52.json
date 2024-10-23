@@ -1,0 +1,62 @@
+[
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.appsbyvir.tipcalculator:id/tipEditText",
+    "text": "15.0",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Tip %",
+    "stepping_events": [],
+    "package": "com.appsbyvir.tipcalculator",
+    "activity": ".MainActivity",
+    "event_type": "gui",
+    "score": 0.3932167693440403,
+    "action": [
+      "clear_and_send_keys",
+      "15"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.appsbyvir.tipcalculator:id/splitBillEditText",
+    "text": "566",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Split Bill",
+    "stepping_events": [],
+    "package": "com.appsbyvir.tipcalculator",
+    "activity": ".MainActivity",
+    "event_type": "gui",
+    "score": 0.32540226115712095,
+    "action": [
+      "clear_and_send_keys_and_hide_keyboard",
+      "4"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]

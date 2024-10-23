@@ -1,0 +1,78 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/signin_signup_social_button_google",
+    "text": "Google",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "event_type": "oracle",
+    "score": 0.17185842080248728,
+    "action": [
+      "wait_until_element_presence",
+      150,
+      "id",
+      "signin_signup_social_button_google"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+     "resource-id": "com.contextlogic.wish:id/signin_signup_social_button_google",
+    "text": "Google",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.17185842080248728,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+ {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]

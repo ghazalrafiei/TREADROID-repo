@@ -1,0 +1,171 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.yelp.android:id/hot_button_search",
+    "text": "Search",
+    "content-desc": "Search",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Nearby",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".nearby.ui.ActivityNearby",
+    "event_type": "oracle",
+    "score": 0.16951278441896042,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "hot_button_search"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.yelp.android:id/hot_button_search",
+    "text": "Search",
+    "content-desc": "Search",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Nearby",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".nearby.ui.ActivityNearby",
+    "event_type": "gui",
+    "score": 0.16951278441896042,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.yelp.android:id/searchbar",
+    "text": "Cleaners, movers, delivery\u2026",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "event_type": "oracle",
+    "score": 0.06866794865992334,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "searchbar"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.yelp.android:id/searchbar",
+    "text": "Cleaners, movers, delivery\u2026",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "event_type": "gui",
+    "score": 0.06866794865992334,
+    "action": [
+      "send_keys",
+      "p198573se@sxwabw.al.net"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.yelp.android:id/locationbar",
+    "text": "Current Location",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "event_type": "gui",
+    "score": 0.06866794865992334,
+    "action": [
+      "send_keys",
+      "Labfellow"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.yelp.android:id/searchbar",
+    "text": "b368794se@mppgzi.al.net",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "event_type": "gui",
+    "score": 0.06866794865992334,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sealbot"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "com.yelp.android:id/search_button",
+    "text": "",
+    "content-desc": "Search Yelp",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "event_type": "gui",
+    "score": 0.1444030796022465,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.yelp.android:id/searchbar",
+    "text": "Sealbot",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.yelp.android",
+    "activity": ".search.ui.ActivitySearchOverlay",
+    "event_type": "oracle",
+    "score": 0.2580270462979873,
+    "action": [
+      "wait_until_text_presence",
+      200,
+      "text",
+      "Sealbot"
+    ]
+  }
+]

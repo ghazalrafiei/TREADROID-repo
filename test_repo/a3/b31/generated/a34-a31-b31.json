@@ -1,0 +1,332 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Already have an account?",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "oracle",
+    "score": 0.23443681560456753,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "login_fragment_sign_in_button"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Already have an account?",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "gui",
+    "score": 0.23443681560456753,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.26370028654734295,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "",
+    "text": "OK",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.geek",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "OK",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.geek",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.3903527781367302,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "sign_in_fragment_email_text"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.3903527781367302,
+    "action": [
+      "send_keys",
+      "z555520se@khvcit.al.net"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_password_text",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "f752415se@cwzjlp.al.net",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2140087816450331,
+    "action": [
+      "send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_password_text",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "t201422se@yfbsop.al.net",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.21027324514256585,
+    "action": [
+      "clear_and_send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2777891034881274,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "",
+    "text": "OK",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.geek",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "OK",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.geek",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.2648952876528104,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.widget.ImageButton[@content-desc=\"Navigate up\"]"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2648952876528104,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_tagline_text",
+    "text": "Smarter Shopping",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "oracle",
+    "score": 0.15244737888375917,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.widget.TextView[contains(@text, \"Smarter Shopping\")]"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_tagline_text",
+    "text": "Smarter Shopping",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "gui",
+    "score": 0.15244737888375917,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]

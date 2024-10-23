@@ -1,0 +1,287 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_create_account_button",
+    "text": "Create Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Smarter Shopping",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "oracle",
+    "score": 0.3313415954510371,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "login_fragment_create_account_button"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_create_account_button",
+    "text": "Create Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Smarter Shopping",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "gui",
+    "score": 0.3313415954510371,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "oracle",
+    "score": 0.4166666666666667,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "create_account_fragment_email_text"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.4166666666666667,
+    "action": [
+      "send_keys",
+      "e271266se@ojtmxq.al.net"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_password_text",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "Confirm Email",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.25,
+    "action": [
+      "send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_last_name_text",
+    "text": "Last Name",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "First Name",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.5,
+    "action": [
+      "send_keys",
+      "Labfellow"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_first_name_text",
+    "text": "First Name",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.4166666666666667,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sealbot"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_create_account_button",
+    "text": "Create Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.4166666666666667,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/multi_button_dialog_fragment_title",
+    "text": "Oops!",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "oracle",
+    "score": 0.14756971142358252,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "multi_button_dialog_fragment_title"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/multi_button_dialog_fragment_title",
+    "text": "Oops!",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.14756971142358252,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "",
+    "text": "OK",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "package": "com.contextlogic.geek",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "OK",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+        "package": "com.contextlogic.geek",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "oracle",
+    "score": 0.13617682084441185,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//*[@content-desc=\"Navigate up\"]"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.13617682084441185,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]

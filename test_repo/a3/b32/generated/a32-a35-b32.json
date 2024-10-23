@@ -1,0 +1,88 @@
+[
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".nearby.ui.ActivityNearby",
+    "package": "com.yelp.android",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.yelp.android:id/nav_sign_up_log_in_button",
+    "text": "SIGN UP OR LOG IN",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.ImageButton",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "",
+        "content-desc": "Navigate up",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".nearby.ui.ActivityNearby",
+        "package": "com.yelp.android",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.yelp.android",
+    "activity": ".nearby.ui.ActivityNearby",
+    "event_type": "gui",
+    "score": 0.30667928523487514,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]
+

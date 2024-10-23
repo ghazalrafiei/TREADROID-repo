@@ -1,0 +1,241 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Already have an account?",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "oracle",
+    "score": 0.2623656280338764,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "login_fragment_sign_in_button"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/login_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Already have an account?",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.LoginActivity",
+    "event_type": "gui",
+    "score": 0.2623656280338764,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.25,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "sign_in_fragment_email_text"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.25,
+    "action": [
+      "send_keys",
+      "p198573se@sxwabw.al.net"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_password_text",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "b777100se@fpyyej.al.net",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2139524668455124,
+    "action": [
+      "send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_create_account_button",
+    "text": "Create Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Don't have an account?",
+    "action": [
+      "click"
+    ],
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.geek",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_confirm_email_text",
+    "text": "Confirm Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Email",
+    "stepping_events": [
+      {
+        "class": "android.widget.TextView",
+        "resource-id": "sign_in_fragment_create_account_button",
+        "id-prefix": "com.contextlogic.geek:id/",
+        "text": "Create Account",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "Don't have an account?",
+        "action": [
+          "click"
+        ],
+        "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.geek",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.1633821666861574,
+    "action": [
+      "send_keys",
+      "Labfellow"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.geek:id/create_account_fragment_last_name_text",
+    "text": "Last Name",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "First Name",
+    "stepping_events": [],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.36656840393940604,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sealbot"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+    "package": "com.contextlogic.geek",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.geek:id/sign_in_fragment_create_account_button",
+    "text": "Create Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Don't have an account?",
+    "stepping_events": [
+      {
+        "class": "android.widget.ImageButton",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "",
+        "content-desc": "Navigate up",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "com.contextlogic.wish.activity.login.createaccount.CreateAccountActivity",
+        "package": "com.contextlogic.geek",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.geek",
+    "activity": "com.contextlogic.wish.activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.35832078630725545,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  }
+]

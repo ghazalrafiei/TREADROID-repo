@@ -1,0 +1,278 @@
+[
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "ru.mail.ui.SlideStackActivity",
+    "package": "ru.mail.mailapp",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "ru.mail.mailapp:id/text",
+    "text": "Inbox",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.ImageButton",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "",
+        "content-desc": "Navigate up",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "ru.mail.ui.SlideStackActivity",
+        "package": "ru.mail.mailapp",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.SlideStackActivity",
+    "event_type": "oracle",
+    "score": 0.2057233074059089,
+    "action": [
+      "wait_until_text_presence",
+      15,
+      "text",
+      "Inbox"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "ru.mail.mailapp:id/toolbar_action_search",
+    "text": "",
+    "content-desc": "Search",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "ru.mail.ui.SlideStackActivity",
+    "package": "ru.mail.mailapp",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "ru.mail.mailapp:id/toolbar_action_new",
+    "text": "",
+    "content-desc": "New Message",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": "ru.mail.ui.SlideStackActivity",
+    "package": "ru.mail.mailapp",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "ru.mail.mailapp:id/subject",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "Subject",
+    "stepping_events": [
+      {
+        "class": "android.widget.TextView",
+        "resource-id": "toolbar_action_search",
+        "id-prefix": "ru.mail.mailapp:id/",
+        "text": "",
+        "content-desc": "Search",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "ru.mail.ui.SlideStackActivity",
+        "package": "ru.mail.mailapp",
+        "event_type": "stepping"
+      },
+      {
+        "class": "android.widget.TextView",
+        "resource-id": "toolbar_action_new",
+        "id-prefix": "ru.mail.mailapp:id/",
+        "text": "",
+        "content-desc": "New Message",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": "ru.mail.ui.SlideStackActivity",
+        "package": "ru.mail.mailapp",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "oracle",
+    "score": 0.07075426301785878,
+    "action": [
+      "wait_until_element_presence",
+      15,
+      "id",
+      "subject"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "ru.mail.mailapp:id/subject",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "Subject",
+    "stepping_events": [],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "gui",
+    "score": 0.07075426301785878,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "2475127680@qq.com"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "ru.mail.mailapp:id/edit_text_to",
+    "text": "\u200b",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "gui",
+    "score": 0.06950239340464275,
+    "action": [
+      "send_keys",
+      "ICSTSuperCool"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "ru.mail.mailapp:id/subject",
+    "text": "j401106se@tbcdes.al.net",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Subject",
+    "stepping_events": [],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "gui",
+    "score": 0.10716875083744526,
+    "action": [
+      "send_keys",
+      "ICSTSuperCoolBody"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "ru.mail.mailapp:id/toolbar_action_send",
+    "text": "",
+    "content-desc": "Send",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "gui",
+    "score": 0.30035392567515373,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "Navigate up",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "gui",
+    "score": 0.16006577972854888,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "ru.mail.mailapp:id/text",
+    "text": "ICSTSuperCool",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "ru.mail.mailapp",
+    "activity": "ru.mail.ui.writemail.WriteActivity",
+    "event_type": "oracle",
+    "score": 0.20589187741279602,
+    "action": [
+      "wait_until_text_presence",
+      20,
+      "text",
+      "ICSTSuperCool"
+    ]
+  }
+]

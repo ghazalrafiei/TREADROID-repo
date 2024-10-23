@@ -1,0 +1,306 @@
+[
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/btn_link",
+    "text": "Get Started",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Sign in to save your favorites and see personalized recommendations.",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.homescreen.HomescreenTabsActivity",
+    "event_type": "oracle",
+    "score": 0.20600802823901176,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "btn_link"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/btn_link",
+    "text": "Get Started",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Sign in to save your favorites and see personalized recommendations.",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.homescreen.HomescreenTabsActivity",
+    "event_type": "gui",
+    "score": 0.20600802823901176,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/btn_sign_in_dialog",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Register",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.2288151126768854,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "btn_sign_in_dialog"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/btn_sign_in_dialog",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Register",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2288151126768854,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.etsy.android:id/txt_title",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.18746554848944974,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "txt_title"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.etsy.android:id/txt_title",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.18746554848944974,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.etsy.android:id/edit_username",
+    "text": "Email or Username",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.2560228384617302,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "edit_username"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.etsy.android:id/edit_username",
+    "text": "Email or Username",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2560228384617302,
+    "action": [
+      "send_keys",
+      "n175773se@nkdjfq.al.net"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.etsy.android:id/edit_password",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "f231781se@gmgrio.al.net",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.1809428483247757,
+    "action": [
+      "send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/button_signin",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot password?",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.16421206750803521,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.etsy.android:id/edit_username",
+    "text": "l330633se@duobmp.al.net",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.12922364209468165,
+    "action": [
+      "send_keys",
+      "Labfellow"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/button_signin",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot password?",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.11388411455684237,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sealbot"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/button_signin",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot password?",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.16421206750803521,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.etsy.android:id/button_signin",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot password?",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "gui",
+    "score": 0.23255665062202346,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.etsy.android:id/edit_username",
+    "text": "Sealbot",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.etsy.android",
+    "activity": ".ui.user.auth.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.28045473371942836,
+    "action": [
+      "wait_until_text_presence",
+      200,
+      "text",
+      "Sealbot"
+    ]
+  }
+]

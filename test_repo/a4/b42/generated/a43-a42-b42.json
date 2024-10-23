@@ -1,0 +1,204 @@
+[
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.appple.app.email:id/actionbar_title_first",
+    "text": "Inbox",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageList",
+    "event_type": "oracle",
+    "score": 0.20486293422679105,
+    "action": [
+      "wait_until_text_presence",
+      15,
+      "text",
+      "Inbox"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.appple.app.email:id/compose",
+    "text": "",
+    "content-desc": "Compose",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageList",
+    "event_type": "gui",
+    "score": 0.09207074033717315,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.MultiAutoCompleteTextView",
+    "resource-id": "com.appple.app.email:id/to",
+    "text": "To",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageCompose",
+    "event_type": "oracle",
+    "score": 0.13368725900848707,
+    "action": [
+      "wait_until_element_presence",
+      15,
+      "id",
+      "to"
+    ]
+  },
+  {
+    "class": "android.widget.MultiAutoCompleteTextView",
+    "resource-id": "com.appple.app.email:id/to",
+    "text": "To",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageCompose",
+    "event_type": "gui",
+    "score": 0.13368725900848707,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "2475127680@qq.com"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.appple.app.email:id/subject",
+    "text": "Subject",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageCompose",
+    "event_type": "gui",
+    "score": 0.2574462220072746,
+    "action": [
+      "send_keys",
+      "ICSTSuperCool"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.appple.app.email:id/message_content",
+    "text": "Message text",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageCompose",
+    "event_type": "gui",
+    "score": 0.11624867158631484,
+    "action": [
+      "send_keys",
+      "ICSTSuperCoolBody"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.appple.app.email:id/send",
+    "text": "",
+    "content-desc": "Send",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageCompose",
+    "event_type": "gui",
+    "score": 0.30035392567515373,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.ImageView",
+    "resource-id": "android:id/up",
+    "text": "",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageList",
+    "event_type": "gui",
+    "score": 0.16770137633596147,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.appple.app.email:id/folder_name",
+    "text": "Sent (Sent)",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.FolderList",
+    "event_type": "gui",
+    "score": 0.22780673019587994,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.appple.app.email:id/subject",
+    "text": "ICSTSuperCool",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.appple.app.email",
+    "activity": "com.fsck.k9.activity.MessageList",
+    "event_type": "oracle",
+    "score": 0.2789849390586217,
+    "action": [
+      "wait_until_text_presence",
+      20,
+      "text",
+      "ICSTSuperCool"
+    ]
+  }
+]

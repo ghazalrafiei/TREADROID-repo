@@ -1,0 +1,541 @@
+[
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.contextlogic.wish:id/create_account_fragment_sign_in_button",
+    "text": "Have an account? Sign in",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot Password?",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "create_account_fragment_sign_in_button",
+        "id-prefix": "com.contextlogic.wish:id/",
+        "text": "Have an account? Sign in",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.createaccount.CreateAccountActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.1882727611809969,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "sign_in_fragment_sign_in_button"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot Password?",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.1882727611809969,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "",
+    "text": "OK",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot Password?",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "OK",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.26370028654734295,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "",
+    "text": "OK",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "OK",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.3903527781367302,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "id",
+      "sign_in_fragment_email_text"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_email_text",
+    "text": "Email",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.3903527781367302,
+    "action": [
+      "send_keys",
+      "z555520se@khvcit.al.net"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_password_text",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "r425795se@cprnhe.al.net",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2140087816450331,
+    "action": [
+      "send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_password_text",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "true",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "b238809se@ybfrbn.al.net",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.21027324514256585,
+    "action": [
+      "clear_and_send_keys",
+      "1qaz2wsX"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_create_account_button",
+    "text": "New? Create an Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/create_account_fragment_last_name_text",
+    "text": "Last Name",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "First Name",
+    "stepping_events": [
+      {
+        "class": "android.widget.TextView",
+        "resource-id": "sign_in_fragment_create_account_button",
+        "id-prefix": "com.contextlogic.wish:id/",
+        "text": "New? Create an Account",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.41340025597148466,
+    "action": [
+      "send_keys",
+      "Labfellow"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/create_account_fragment_first_name_text",
+    "text": "First Name",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.33006692263815135,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sealbot"
+    ]
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.contextlogic.wish:id/create_account_fragment_sign_in_button",
+    "text": "Have an account? Sign in",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_sign_in_button",
+    "text": "Sign In",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "Forgot Password?",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "create_account_fragment_sign_in_button",
+        "id-prefix": "com.contextlogic.wish:id/",
+        "text": "Have an account? Sign in",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.createaccount.CreateAccountActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.2777891034881274,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "oracle"
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "",
+    "text": "OK",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/sign_in_fragment_create_account_button",
+    "text": "New? Create an Account",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "action": [
+      "click"
+    ],
+    "activity": ".activity.login.signin.SignInActivity",
+    "package": "com.contextlogic.wish",
+    "event_type": "stepping"
+  },
+  {
+    "class": "android.widget.Button",
+    "resource-id": "com.contextlogic.wish:id/create_account_fragment_sign_in_button",
+    "text": "Have an account? Sign in",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [
+      {
+        "class": "android.widget.Button",
+        "resource-id": "",
+        "id-prefix": "",
+        "text": "OK",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      },
+      {
+        "class": "android.widget.TextView",
+        "resource-id": "sign_in_fragment_create_account_button",
+        "id-prefix": "com.contextlogic.wish:id/",
+        "text": "New? Create an Account",
+        "content-desc": "",
+        "clickable": "true",
+        "password": "false",
+        "naf": "",
+        "parent_text": "",
+        "sibling_text": "",
+        "action": [
+          "click"
+        ],
+        "activity": ".activity.login.signin.SignInActivity",
+        "package": "com.contextlogic.wish",
+        "event_type": "stepping"
+      }
+    ],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "event_type": "gui",
+    "score": 0.1298018659775456,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/login_fragment_tagline_text",
+    "text": "Shopping Made Fun",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "oracle",
+    "score": 0.13780749713381132,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.widget.TextView[contains(@text, \"Shopping Made Fun\")]"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "com.contextlogic.wish:id/login_fragment_tagline_text",
+    "text": "Shopping Made Fun",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.signin.SignInActivity",
+    "event_type": "gui",
+    "score": 0.13780749713381132,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.contextlogic.wish:id/create_account_fragment_first_name_text",
+    "text": "Sealbot",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.contextlogic.wish",
+    "activity": ".activity.login.createaccount.CreateAccountActivity",
+    "event_type": "oracle",
+    "score": 0.2976541394988696,
+    "action": [
+      "wait_until_text_presence",
+      200,
+      "text",
+      "Sealbot"
+    ]
+  }
+]

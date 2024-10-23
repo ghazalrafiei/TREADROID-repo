@@ -1,0 +1,147 @@
+[
+  {
+    "class": "EMPTY_EVENT",
+    "score": 0,
+    "event_type": "gui"
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "douzifly.list:id/fab_add",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "I was not looking for my dreams to interpret my life, but rather for my life to interpret my dreams. ",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.23506820015609264,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "douzifly.list:id/edit_text",
+    "text": "Title",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.26558002616677967,
+    "action": [
+      "send_keys_and_hide_keyboard",
+      "Sample Todo"
+    ]
+  },
+  {
+    "class": "android.widget.ImageButton",
+    "resource-id": "douzifly.list:id/fab_add",
+    "text": "",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "true",
+    "parent_text": "",
+    "sibling_text": "A man is not old as long as he is seeking something. A man is not old until regrets take the place of dreams.",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.24208716555897677,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/txt_thing",
+    "text": "Sample Todo",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "oracle",
+    "score": 0.3627823181450367,
+    "action": [
+      "wait_until_text_presence",
+      100,
+      "text",
+      "Sample Todo"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/txt_thing",
+    "text": "Sample Todo",
+    "content-desc": "",
+    "clickable": "false",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.3627823181450367,
+    "action": [
+      "swipe_right"
+    ]
+  },
+  {
+    "class": "android.widget.TextView",
+    "resource-id": "douzifly.list:id/btn_delete",
+    "text": "DELETE",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "gui",
+    "score": 0.3386685935159524,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "",
+    "clickable": "",
+    "password": "",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "douzifly.list",
+    "activity": ".ui.home.MainActivity",
+    "event_type": "oracle",
+    "score": 0,
+    "action": [
+      "wait_until_text_invisible",
+      100,
+      "text",
+      "Sample Todo"
+    ]
+  }
+]

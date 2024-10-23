@@ -1,0 +1,63 @@
+[
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.stoutner.privacybrowser.standard:id/url_edittext",
+    "text": "https://duckduckgo.com/?kao=-1&kak=-1",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.stoutner.privacybrowser.standard",
+    "activity": "com.stoutner.privacybrowser.activities.MainWebViewActivity",
+    "event_type": "gui",
+    "score": 0.2055249735713005,
+    "action": [
+      "click"
+    ]
+  },
+  {
+    "class": "android.widget.EditText",
+    "resource-id": "com.stoutner.privacybrowser.standard:id/url_edittext",
+    "text": "https://duckduckgo.com/?kao=-1&kak=-1",
+    "content-desc": "",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.stoutner.privacybrowser.standard",
+    "activity": "com.stoutner.privacybrowser.activities.MainWebViewActivity",
+    "event_type": "gui",
+    "score": 0.2055249735713005,
+    "action": [
+      "send_keys_and_enter",
+      "https://www.ics.uci.edu"
+    ]
+  },
+  {
+    "class": "android.view.View",
+    "resource-id": "",
+    "text": "",
+    "content-desc": "UCI Donald Bren School of Information and Computer Sciences - logo",
+    "clickable": "true",
+    "password": "false",
+    "naf": "",
+    "parent_text": "",
+    "sibling_text": "",
+    "stepping_events": [],
+    "package": "com.stoutner.privacybrowser.standard",
+    "activity": "com.stoutner.privacybrowser.activities.MainWebViewActivity",
+    "event_type": "oracle",
+    "score": 0.3333333333333333,
+    "action": [
+      "wait_until_element_presence",
+      200,
+      "xpath",
+      "//android.view.View[@content-desc=\"UCI Donald Bren School of Information and Computer Sciences - logo\"]"
+    ]
+  }
+]
