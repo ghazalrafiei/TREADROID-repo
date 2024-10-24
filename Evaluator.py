@@ -161,9 +161,9 @@ class Evaluator:
                         # print("tppred",e_ans)
                 else:
                     if event_type == 'gui':
-                        gui_fns += 1
+                        gui_fps += 1
                     elif event_type == 'oracle':
-                        oracle_fns += 1
+                        oracle_fps += 1
                         # print("gui-e_ans",e_ans)
                         # print("gui-es_pred",es_pred)
                         # print('--fp')
